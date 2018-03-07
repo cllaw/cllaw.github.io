@@ -311,14 +311,14 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 .banner {
-	background-image:url('../images/IMG_0072.jpg');
+	background-image:url('../images/IMG_5607.jpg');
 	background-size: cover;
 	min-height: 950px;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 }
 .banner-text {
-	padding-top: 35%;
+	padding-top: 25%;
 }
 .banner-text h1 {
 	color: #DAF1EB;
@@ -535,14 +535,14 @@ ul li {
 .innerbannerblog {
 	background-image:url('../images/IMG_9923.JPG');
 	background-size: cover;
-	min-height: 550px;
+	min-height: 50px;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 
 }
 .innerbannerblog-text {
-	padding-top: 20%;
-	padding-bottom: 5%;
+	padding-top: 5%;
+	padding-bottom: 10%;
 }
 
 .innerbannerblog-text h1 {
@@ -586,6 +586,23 @@ ul li {
 	line-height: 25px;
 	font-weight: 400;
 }
+
+#inner-descriptioniconimg img {
+	width:500px;
+	height:500px;
+	border-radius:50%;
+}
+
+#blogcontent img {
+	width:300px;
+	height:300px;
+	border-radius:50%;
+}
+
+#blogcontent h2 {
+	text-align: center;
+}
+
 	
 /* ------------------------------------------------------------------------------
 	ABOUT - Inner Page Banner 
@@ -626,7 +643,7 @@ ul li {
 .innerbanner-text img {
 	width:250px;
 	height:250px;
-	border-radius:50%;	
+	border-radius:50%;
 }
 
 /* ------------------------------------------------------------------------------
