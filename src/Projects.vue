@@ -69,7 +69,6 @@
             A two person group project written in C. Made on a micro controller with a
             ATmega32U2 microchip. This game allows players to choose different throwing speeds
             and move where they want to throw and catch the ball. It was modelled after a paddle and catch game.
-            game.
             <br><br>
             This was a very fun project to work on as it had infrared connectivity between the two micro controllers and played
             a victory sound which we generated ourselves. It also let us be creative by designing and implementing exactly
