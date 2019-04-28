@@ -77,7 +77,6 @@
         <img src="src/assets/IMG_5451-min.jpg" style="float: left; width:49.5%; margin-right: 0.5%; margin-bottom: 0.5em;">
         <img src="src/assets/IMG_5471-min.jpg" style="float: left; width:49.5%; margin-left: 0.5%; margin-bottom: 0.5em;">
       <p><br></p>
-    <a href="queenstown" style="text-align: right"><h5>Back to top</h5></a>
     <br>
     </div>
     <footer class="section footer">

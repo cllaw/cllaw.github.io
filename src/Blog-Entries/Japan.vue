@@ -78,9 +78,6 @@
       <!--<p><br></p>-->
 
       <!--<h4>Back to Tokyo</h4>-->
-
-      <br>
-      <a href="japan" style="text-align: right"><h5>Back to top</h5></a>
       <br>
     </div>
     <footer class="section footer">
