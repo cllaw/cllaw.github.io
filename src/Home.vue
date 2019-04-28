@@ -135,7 +135,7 @@
       </div>
       <div class="dash"></div>
       <br>
-      <a href="../CV/chuan_law_cv_december.pdf" target="_blank">
+      <a href="../CV/Chuan_Law_-_Resume_April.pdf" target="_blank">
         <b-button size="lg">Download my CV</b-button>
       </a> <br><br>
       <a href="https://www.linkedin.com/in/chuan-law-2aab04174" target="_blank"><i
