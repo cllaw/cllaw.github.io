@@ -1,52 +1,88 @@
 <template>
   <div>
-    <div id="second">
-      <h1>2018</h1>
-      <section id="bottom" class="works section no-padding">
-        <div class="container-fluid">
-          <div class="row no-gutter">
-            <div class="col-md-5 col-sm-6 work"><a @click="$router.push({name: 'travel'})" class="work-box"> <img src="./assets/IMG_5396-min.jpg"
-                                                                                                                  alt="">
-              <div class="overlay">
-                <div class="overlay-caption">
-                  <h5>Travel & More</h5>
-                  <p>Japan & Queenstown</p>
-                </div>
-              </div>
-              <!-- overlay -->
-            </a></div>
-          </div>
-        </div>
-      </section>
+    <div id="header">
+      <h1>Blog</h1>
     </div>
 
-    <div id="first">
-      <h1>2019</h1>
-      <section id="works" class="works section no-padding">
-        <div class="container-fluid">
-          <div class="row no-gutter">
-            <div class="col-md-5 col-sm-6 work"><a class="work-box"> <img src="./assets/osaka-hotel.jpg"
-                                                                          alt="">
-              <div class="overlay">
-                <div class="overlay-caption">
-                  <h5>Coming Soon</h5>
-                  <!--<p>*</p>-->
-                </div>
-              </div>
-              <!-- overlay -->
-            </a></div>
-          </div>
+    <div class="timeline">
+      <div class="container right">
+        <div class="content b2020">
+          <h2>2020</h2>
+          <p>Singapore, Japan</p>
         </div>
-      </section>
+      </div>
+      <div class="container left">
+        <a @click="$router.push({name: 'travel2019'})">
+          <div class="content b2019">
+            <h2>2019</h2>
+            <p>Christchurch, Papua New Guinea</p>
+          </div>
+        </a>
+      </div>
+      <div class="container right">
+        <a @click="$router.push({name: 'travel'})">
+          <div class="content b2018">
+            <h2>2018</h2>
+            <p>Queenstown, Japan, Singapore</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="container left">
+        <div class="content b2017">
+          <h2>2017</h2>
+          <p>Malaysia</p>
+        </div>
+      </div>
     </div>
+
+    <!--<div id="second">-->
+      <!--<h1>2018</h1>-->
+      <!--<section id="bottom" class="works section no-padding">-->
+        <!--<div class="container-fluid">-->
+          <!--<div class="row no-gutter">-->
+            <!--<div class="col-md-5 col-sm-6 work"><a @click="$router.push({name: 'travel'})" class="work-box"> <img src="IMG_5396-min.jpg"-->
+                                                                                                                  <!--alt="">-->
+              <!--<div class="overlay">-->
+                <!--<div class="overlay-caption">-->
+                  <!--<h5>Travel & More</h5>-->
+                  <!--<p>Japan & Queenstown</p>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; overlay &ndash;&gt;-->
+            <!--</a></div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</section>-->
+    <!--</div>-->
+
+    <!--<div id="first">-->
+      <!--<h1>2019</h1>-->
+      <!--<section id="works" class="works section no-padding">-->
+        <!--<div class="container-fluid">-->
+          <!--<div class="row no-gutter">-->
+            <!--<div class="col-md-5 col-sm-6 work"><a class="work-box"> <img src=""-->
+                                                                          <!--alt="">-->
+              <!--<div class="overlay">-->
+                <!--<div class="overlay-caption">-->
+                  <!--<h5>Coming Soon</h5>-->
+                  <!--&lt;!&ndash;<p>*</p>&ndash;&gt;-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; overlay &ndash;&gt;-->
+            <!--</a></div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</section>-->
+    <!--</div>-->
 
     <footer class="section footer">
       <div class="footer-bottom">
-        <div class="container">
+
           <div class="col-md-12">
             <p>© Chuan Law. All Rights Reserved</p>
           </div>
-        </div>
+
       </div>
     </footer>
   </div>
@@ -60,6 +96,21 @@
 
 <style scoped>
 
+  #header h1{
+    background-image: url("/src/assets/IMG_9923.jpg");
+    background-size: cover;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #fff;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+
+    padding-top: 3%;
+  }
+
   h1 {
     /*color: #fff;*/
     font-family: "Roboto Slab", sans-serif;
@@ -67,153 +118,155 @@
     font-weight: 700;
   }
 
-  #first {
-    padding-top: 1%;
-    padding-bottom: 2%;
+  * {
+    box-sizing: border-box;
   }
 
-  .work {
-    -moz-box-shadow: 0 0 0 1px #fff;
-    -webkit-box-shadow: 0 0 0 1px #fff;
-    box-shadow: 0 0 0 1px #fff;
+  /* Set a background color */
+  body {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+  }
 
-    overflow: hidden;
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
     position: relative;
-    /*visibility: hidden;*/
-    display: block;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
   }
 
-  .work img {
-    width: 100%;
-    height: auto;
-    max-height: 60vh;
-    display: block;
-  }
-
-  .work .overlay {
-    background: rgba(0, 0, 0, 0.4);
-    height: 100%;
-    left: 0;
-    opacity: 0;
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
     position: absolute;
+    width: 6px;
+    background-color: #e1e1e1;
     top: 0;
-    width: 100%;
-    -moz-transition: opacity, 0.3s;
-    -o-transition: opacity, 0.3s;
-    -webkit-transition: opacity, 0.3s;
-    transition: opacity, 0.3s;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
   }
 
-  .work .overlay-caption {
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
     position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 100%;
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    right: -2%;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
   }
 
-  .work h5, .work p, .work img {
-    -moz-transition: all, 0.5s;
-    -o-transition: all, 0.5s;
-    -webkit-transition: all, 0.5s;
-    transition: all, 0.5s;
-  }
-
-  .work h5, .work p {
-    color: #fff;
+  /* Place the container to the left */
+  .left {
+    left: 0;
     margin: 0;
-    opacity: 0;
-    /*font-size: 24px;*/
   }
 
-  .work h5 {
-    margin-bottom: 5px;
-    -moz-transform: translate3d(0, -200%, 0);
-    -ms-transform: translate3d(0, -200%, 0);
-    -webkit-transform: translate3d(0, -200%, 0);
-    transform: translate3d(0, -200%, 0);
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+    margin: 0;
   }
 
-  .work p {
-    -moz-transform: translate3d(0, 200%, 0);
-    -ms-transform: translate3d(0, 200%, 0);
-    -webkit-transform: translate3d(0, 200%, 0);
-    transform: translate3d(0, 200%, 0);
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
   }
 
-  .work-box:hover img {
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
   }
 
-  .work-box:hover .overlay {
-    opacity: 1;
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -2%;
   }
 
-  .work-box:hover .overlay h5, .work-box:hover .overlay p {
-    opacity: 1;
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  .b2020 {
+    background-color: lightgreen;
   }
 
-  .work:nth-child(1) {
-    -moz-animation-delay: 0.1s;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
+  .b2019 {
+    background-color: lightsalmon;
   }
 
-  .work:nth-child(2) {
-    -moz-animation-delay: 0.2s;
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
+  .b2018 {
+    background-color: skyblue;
   }
 
-  .work:nth-child(3) {
-    -moz-animation-delay: 0.3s;
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
+  .b2017 {
+    background-color: lavender;
   }
 
-  .work:nth-child(4) {
-    -moz-animation-delay: 0.4s;
-    -webkit-animation-delay: 0.4s;
-    animation-delay: 0.4s;
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 6px;
   }
 
-  .work:nth-child(5) {
-    -moz-animation-delay: 0.8s;
-    -webkit-animation-delay: 0.8s;
-    animation-delay: 0.8s;
-  }
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+      left: 30px;
+    }
 
-  .work:nth-child(6) {
-    -moz-animation-delay: 0.7s;
-    -webkit-animation-delay: 0.7s;
-    animation-delay: 0.7s;
-  }
+    /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
 
-  .work:nth-child(7) {
-    -moz-animation-delay: 0.6s;
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s;
-  }
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
 
-  .work:nth-child(8) {
-    -moz-animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-  }
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 0%;
+    }
 
-  .animated {
-    visibility: visible;
+    /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
   }
 </style>

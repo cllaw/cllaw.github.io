@@ -4,6 +4,7 @@ import Navbar from './Navbar.vue';
 import Projects from './Projects.vue';
 import Blog from './Blog.vue';
 import Travel from './Blog-Entries/Travel2018.vue';
+import Travel2019 from './Blog-Entries/Travel2019.vue';
 import Japan from './Blog-Entries/Japan.vue';
 import Queenstown from './Blog-Entries/Queenstown.vue';
 
@@ -46,6 +47,11 @@ const routes = [
     component: Travel
   },
   {
+    path: "/travel2019",
+    name: "travel2019",
+    component: Travel2019
+  },
+  {
     path: "/japan",
     name: "japan",
     component: Japan
@@ -59,7 +65,8 @@ const routes = [
 
 const router = new VueRouter({
   routes: routes,
-  mode: 'history',
+  // mode: 'history',
+  mode: 'hash',
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }
   }

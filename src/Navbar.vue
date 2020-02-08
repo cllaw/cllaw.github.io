@@ -11,10 +11,11 @@
           <b-nav-item class="btn btn-edit" @click="$router.push({name: 'home'})">About Me</b-nav-item>
           <b-nav-item class="btn btn-edit" @click="$router.push({name: 'projects'})">Projects</b-nav-item>
           <b-nav-item class="btn btn-edit" @click="$router.push({name: 'blog'})">Blog</b-nav-item>
+
       </b-navbar-nav>
 
       <b-navbar-nav>
-        <b-nav-item-dropdown text="Contact" right>
+        <b-nav-item-dropdown class="btn btn-edit" text="Contact">
           <b-dropdown-item href="mailto:cll62@uclive.ac.nz">Email</b-dropdown-item>
           <b-dropdown-item href="https://www.linkedin.com/in/chuan-law-2aab04174">LinkedIn</b-dropdown-item>
           <!--<a href="mailto:cllaw_1997@hotmail.com">Email</a>-->

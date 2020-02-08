@@ -1,79 +1,83 @@
 <template>
-    <div>
-      <div id="header" @click="$router.push({name: 'blog'})">
-        <h1>2018</h1>
-      </div>
+  <div>
+    <div id="header" @click="$router.push({name: 'blog'})">
+      <h1>2019</h1>
+    </div>
 
-      <div id="image_section">
-        <section id="works" class="works section no-padding">
-          <div class="container-fluid">
-            <div class="row no-gutter">
-
-              <div class="col-lg 4 col-md-6 col-sm-6 work"><h2 align="center"></h2><a @click="$router.push({name: 'japan'})" class="work-box"> <img src="/src/assets/IMG_6298-min.JPG" alt="">
-                <div class="overlay">
-                  <div class="overlay-caption">
-                    <h5>Japan</h5>
-                    <!--<p>*</p>-->
-                  </div>
+    <div id="image_section">
+      <section id="works" class="works section no-padding">
+        <div class="container-fluid">
+          <div class="row no-gutter">
+            <div class="col-lg 4 col-md-6 col-sm-6 work"><h2 align="center"></h2>
+              <a @click="$router.push({name: ''})" class="work-box"> <img src="/src/assets/IMG_6449.jpg" alt="">
+              <div class="overlay">
+                <div class="overlay-caption">
+                  <h5>Christchurch</h5>
+                  <!--<p>*</p>-->
                 </div>
-                <!-- overlay -->
-              </a></div>
+              </div>
+              <!-- overlay -->
+            </a></div>
 
-              <div class="col-lg 4 col-md-6 col-sm-6 work"><h2 align="center"></h2><a @click="$router.push({name: 'queenstown'})" class="work-box"> <img src="/src/assets/IMG_3923-min.jpg" alt="">
-                <div class="overlay">
-                  <div class="overlay-caption">
-                    <h5>Queenstown</h5>
-                    <!--<p>*</p>-->
-                  </div>
+            <div class="col-lg 4 col-md-6 col-sm-6 work"><h2 align="center"></h2>
+              <a @click="$router.push({name: ''})" class="work-box"> <img src="/src/assets/IMG_5564.jpg" alt="">
+              <div class="overlay">
+                <div class="overlay-caption">
+                  <h5>Papua New Guinea</h5>
+                  <!--<p>*</p>-->
                 </div>
-                <!-- overlay -->
-              </a></div>
-            </div>
-          </div>
-        </section>
-
-        <section id="works2" class="works section no-padding">
-          <div class="container-fluid">
-            <div class="row no-gutter">
-              <div class="col-lg 4 col-md-6 col-sm-6 work"><a class="work-box"> <img src="/src/assets/csse.jpg" alt="">
-                <div class="overlay">
-                  <div class="overlay-caption">
-                    <h5>Everyday</h5>
-                  </div>
-                </div>
-                <!-- overlay -->
-              </a></div>
-
-              <div class="col-lg 4 col-md-6 col-sm-6 work"><a class="work-box"> <img src="/src/assets/flower-car.jpg" alt="">
-                <div class="overlay">
-                  <div class="overlay-caption">
-                    <h5>Other</h5>
-                  </div>
-                </div>
-                <!-- overlay -->
-              </a></div>
-            </div>
-          </div>
-        </section>
-
-      </div>
-      <br>
-      <footer class="section footer">
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="col-md-12">
-              <p>© Chuan Law. All Rights Reserved</p>
-            </div>
+              </div>
+              <!-- overlay -->
+            </a></div>
           </div>
         </div>
-      </footer>
+      </section>
+
+      <section id="works2" class="works section no-padding">
+        <div class="container-fluid">
+          <div class="row no-gutter">
+            <div class="col-lg 4 col-md-6 col-sm-6 work"><a class="work-box"> <img src="/src/assets/IMG_2928.jpg" alt="">
+              <div class="overlay">
+                <div class="overlay-caption">
+                  <h5>Graduation</h5>
+                </div>
+              </div>
+              <!-- overlay -->
+            </a></div>
+
+
+          <div class="col-lg 4 col-md-6 col-sm-6 work"><a class="work-box"> <img src="/src/assets/IMG_0523.jpg" alt="">
+            <div class="overlay">
+              <div class="overlay-caption">
+                <h5>Family & Friends</h5>
+              </div>
+            </div>
+            <!-- overlay -->
+          </a></div>
+        </div>
+        </div>
+      </section>
+
+
+
     </div>
+    <br>
+    <footer class="section footer">
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="col-md-12">
+            <p>© Chuan Law. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "Travel2018"
-    }
+  export default {
+    name: "Travel2019"
+  }
 </script>
 
 <style scoped>
