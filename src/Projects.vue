@@ -112,15 +112,13 @@
         <div style="text-align: left; padding-left: 35%; float: left;">
           <p>
             Email:<br><br>
-            Phone:<br><br>
             Address:<br>
           </p>
         </div>
         <div style="text-align: left; padding-right: 20%; padding-left: 10%; float: left;">
           <p>
-            cll62@uclive.ac.nz <br><br>
-            +64 22 076 8987 <br><br>
-            Christchurch, New Zealand <br>
+            chuan.law8@gmail.com <br><br>
+            Wellington, New Zealand <br>
           </p>
         </div>
         <div style="clear:both"></div>
@@ -130,11 +128,10 @@
       <a href="../CV/Chuan_Law_-_Resume_April.pdf" target="_blank">
         <b-button size="lg">Download my CV</b-button>
       </a> <br><br>
-      <a href="https://www.linkedin.com/in/chuan-law-2aab04174" target="_blank"><i
+      <a href="https://www.linkedin.com/in/chuan-law" target="_blank"><i
         class="fa fa-linkedin fa-3x"></i></a>
-      <a href="mailto:cll62@uclive.ac.nz" title="cll62@uclive.ac.nz"><i class="fa fa-envelope fa-3x"></i></a>
+      <a href="mailto:chuan.law8@gmail.com" title="chuan.law8@gmail.com"><i class="fa fa-envelope fa-3x"></i></a>
       <a href="https://github.com/cllaw" target="_blank"><i class="fa fa-github fa-3x"></i></a>
-      <!--<a href="https://twitter.com/ChexBB"><i class="fa fa-twitter fa-3x"></i></a>-->
 
     </div>
 
