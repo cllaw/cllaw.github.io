@@ -16,8 +16,7 @@
 
       <b-navbar-nav>
         <b-nav-item-dropdown class="btn btn-edit" text="Contact">
-          <b-dropdown-item href="mailto:cll62@uclive.ac.nz">Email</b-dropdown-item>
-          <b-dropdown-item href="https://www.linkedin.com/in/chuan-law-2aab04174">LinkedIn</b-dropdown-item>
+          <b-dropdown-item href="https://www.linkedin.com/in/chuan-law/">LinkedIn</b-dropdown-item>
           <!--<a href="mailto:cllaw_1997@hotmail.com">Email</a>-->
         </b-nav-item-dropdown>
       </b-navbar-nav>

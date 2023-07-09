@@ -105,34 +105,21 @@
     </div>
 
     <div id="links">
-      <h3>Contact</h3>
+      <h3>Connect with me!</h3>
       <div class="dash"></div>
-      <br>
       <div id="quick-contact">
-        <div style="text-align: left; padding-left: 35%; float: left;">
           <p>
-            Email:<br><br>
-            Address:<br>
+            <a href="https://www.linkedin.com/in/chuan-law/" target="_blank"><i
+              class="fa fa-linkedin fa-3x"></i></a>
+            <a href="https://github.com/cllaw" target="_blank"><i class="fa fa-github fa-3x"></i></a>
           </p>
-        </div>
-        <div style="text-align: left; padding-right: 20%; padding-left: 10%; float: left;">
-          <p>
-            chuan.law8@gmail.com <br><br>
-            Wellington, New Zealand <br>
-          </p>
-        </div>
         <div style="clear:both"></div>
       </div>
       <div class="dash"></div>
       <br>
-      <a href="../CV/Chuan_Law_-_Resume_April.pdf" target="_blank">
-        <b-button size="lg">Download my CV</b-button>
-      </a> <br><br>
-      <a href="https://www.linkedin.com/in/chuan-law" target="_blank"><i
-        class="fa fa-linkedin fa-3x"></i></a>
-      <a href="mailto:chuan.law8@gmail.com" title="chuan.law8@gmail.com"><i class="fa fa-envelope fa-3x"></i></a>
-      <a href="https://github.com/cllaw" target="_blank"><i class="fa fa-github fa-3x"></i></a>
-
+    <a href="../CV/Chuan_Law_-_October_2021.pdf" target="_blank">
+      <b-button size="lg">Download my CV</b-button>
+    </a>
     </div>
 
     <footer class="section footer">

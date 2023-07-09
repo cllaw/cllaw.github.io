@@ -10,22 +10,13 @@
     <div id="bio">
       <h3>About Me</h3>
       <br>
-      <p>I am currently in my final year of a Bachelor of Science in Computer Science (BSc) at the University of Canterbury, New Zealand. I expect to graduate at the end of 2019.
-        <br>
-        Along with my computer science papers, I was able to study different disciplines such as engineering, information systems and philosophy.
-        I've been enjoying software and website/app development aspects of this degree the most.
+      <p>Hi there and welcome to my space on the web!
+        <br><br>
+        I am a Data Engineer at <a href="https://www.trademe.co.nz" target="_blank">Trade Me</a> 
+        and a Master's student at Victoria University of Wellington studying towards a 
+        <a href="https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-artificial-intelligence/overview" target="_blank">Master of Artificial Intelligence </a>.
       </p>
-      <p>I was born in Malaysia and grew up in the city of Port Moresby, Papua New Guinea. I moved to Christchurch in 2013 for
-        high school which is where I was first introduced to programming. While at Burnside High School, I was a part of
-        the competitive Badminton team and an international student reading tutor. Moving to Christchurch has enabled me to pursue
-        my interests in the wider world of technology and allowed me study such a fulfilling degree.
-      </p>
-      <p>In my free time I enjoy getting together with friends to play fighting video games. Recently I've become really
-        obsessed with crime fiction movies and have been watching all the classics.
-        Badminton is a longtime hobby of mine which I used to play a lot with my parents and I love watching basketball.
-        I also use a lot of forms of social media but my favourite and most used platform nowadays is twitter.
-      </p>
-      <p>Working on this website and my blog as a small personal project and to keep me busy!</p>
+      <p>I use this website to post cool photos I've taken over the years to write about some of thoughts.</p>
 
       <br>
       <h4>Why I like software development:</h4>
@@ -100,7 +91,7 @@
 
       <p>This is just one of my favourites from 2018. Check out my projects page to see all of my featured work!</p>
       <b-button size="nd" @click="$router.push({name: 'projects'})">View my projects</b-button>
-      <br><br><br>
+      <br><br><br>x
 
       <h3>Blog</h3>
       <br>
@@ -113,37 +104,21 @@
     </div>
 
     <div id="links">
-      <h3>Contact</h3>
+      <h3>Connect with me!</h3>
       <div class="dash"></div>
-      <br>
       <div id="quick-contact">
-        <div style="text-align: left; padding-left: 35%; float: left;">
           <p>
-            Email:<br><br>
-            Phone:<br><br>
-            Address:<br>
+            <a href="https://www.linkedin.com/in/chuan-law/" target="_blank"><i
+              class="fa fa-linkedin fa-3x"></i></a>
+            <a href="https://github.com/cllaw" target="_blank"><i class="fa fa-github fa-3x"></i></a>
           </p>
-        </div>
-        <div style="text-align: left; padding-right: 20%; padding-left: 10%; float: left;">
-          <p>
-            cll62@uclive.ac.nz <br><br>
-            +64 22 076 8987 <br><br>
-            Christchurch, New Zealand <br>
-          </p>
-        </div>
         <div style="clear:both"></div>
       </div>
       <div class="dash"></div>
       <br>
-      <a href="../CV/Chuan_Law_-_Resume_April.pdf" target="_blank">
-        <b-button size="lg">Download my CV</b-button>
-      </a> <br><br>
-      <a href="https://www.linkedin.com/in/chuan-law-2aab04174" target="_blank"><i
-        class="fa fa-linkedin fa-3x"></i></a>
-      <a href="mailto:cll62@uclive.ac.nz" title="cll62@uclive.ac.nz"><i class="fa fa-envelope fa-3x"></i></a>
-      <a href="https://github.com/cllaw" target="_blank"><i class="fa fa-github fa-3x"></i></a>
-      <!--<a href="https://twitter.com/ChexBB"><i class="fa fa-twitter fa-3x"></i></a>-->
-
+    <a href="../CV/Chuan_Law_-_October_2021.pdf" target="_blank">
+      <b-button size="lg">Download my CV</b-button>
+    </a>
     </div>
 
     <footer class="section footer">
