@@ -41,10 +41,10 @@
         </li>
       </ul>
 
-      <p>I am an expereince cloud engineer well versed in 3 of the major public cloud offers of AWS, GCP and Azure. 
-      I have Terraform experience using all three and I am cloud certified in GCP and Azure.
+      <p>I am an experienced cloud engineer well versed in 3 major public cloud offerings of AWS, GCP and Azure. 
+      I have Terraform experience building production capable infrastructure using all three and I am cloud certified in GCP and Azure.
       </p>
-      <p>As a data engineer, I am proficient with SQL and Snowflake. I have recently been upskilling in the analytics space by using DBT.
+      <p>As a data engineer, I am proficient with SQL and Snowflake. I have recently been upskilling in the analytics space with the use of DBT.
       </p>
 
       <h3>Projects</h3>
