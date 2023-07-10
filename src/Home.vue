@@ -1,10 +1,10 @@
 <template>
   <div>
     <div id="head">
-      <img src="./assets/profile.jpg" height=250 width=250>
+      <img src="./assets/profile_picture.jpg" height=250 width=250>
       <h1>Chuan Law</h1>
-      <h2>Computer Science at University of Canterbury</h2>
-      <p>Christchurch, New Zealand</p>
+      <h2>Data Engineer | Master's Student</h2>
+      <p>Wellington, New Zealand</p>
     </div>
 
     <div id="bio">
@@ -14,25 +14,9 @@
         <br><br>
         I am a Data Engineer at <a href="https://www.trademe.co.nz" target="_blank">Trade Me</a> 
         and a Master's student at Victoria University of Wellington studying towards a 
-        <a href="https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-artificial-intelligence/overview" target="_blank">Master of Artificial Intelligence </a>.
+        <a href="https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-artificial-intelligence/overview" target="_blank">Master of Artificial Intelligence</a>.
       </p>
       <p>I use this website to post cool photos I've taken over the years to write about some of thoughts.</p>
-
-      <br>
-      <h4>Why I like software development:</h4>
-        <p>
-        <br>
-        1. The Learning - I'm still amazed at how much I learn everyday from the smallest things.
-        As I read documentation or implement some code or even just google an error I realised that I am always learning.
-        I love the aspect of continuous learning and how it makes me always aim higher.
-        <br><br>
-        2. The People - I feel the most productive when I'm around other motivated individuals. The teamwork and social aspect
-        of everything is what I have really come to appreciate; I love working in a team to create new things!
-        <br><br>
-        3. The Impact - Seeing the world shift more and more into the digital age inspires me to create things that can be
-        used by many different people around the world. Knowing that what I do can make a change is very fulfilling and motivating.
-        </p>
-      <br>
 
       <h3>Skills</h3>
       <br>
@@ -41,44 +25,27 @@
           <img src="https://icongr.am/devicon/python-original.svg?size=100">
         </li>
         <li class="list-inline-item grow-md">
-          <img src="https://icongr.am/devicon/java-original-wordmark.svg?size=100">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" height=50px>
         </li>
         <li class="list-inline-item grow-md">
-          <img src="https://icongr.am/devicon/javascript-original.svg?size=100">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original-wordmark.svg" height=150px>
         </li>
         <li class="list-inline-item grow-md">
-          <img src="https://icongr.am/devicon/cplusplus-original.svg?size=100">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg?" height=75px>
         </li>
         <li class="list-inline-item grow-md">
-          <img src="https://icongr.am/devicon/c-original.svg?size=100">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg" height=50px>
         </li>
         <li class="list-inline-item grow-md">
-          <img src="https://icongr.am/devicon/php-original.svg?size=100">
-        </li>
-        <li class="list-inline-item grow-md">
-          <img src="https://icongr.am/devicon/mysql-original-wordmark.svg?size=100">
-        </li>
-        <li class="list-inline-item grow-md">
-          <img src="https://icongr.am/devicon/vuejs-original.svg?size=100">
-        </li>
-        <li class="list-inline-item grow-md">
-          <img src="https://icongr.am/devicon/nodejs-original-wordmark.svg?size=100">
-        </li>
-        <li class="list-inline-item grow-md">
-          <img src="https://icongr.am/devicon/git-original-wordmark.svg?size=100">
-        </li>
-        <li class="list-inline-item grow-md">
-          <img src="https://icongr.am/devicon/vim-original.svg?size=100">
+          <img src="https://logowik.com/content/uploads/images/dbt5596.jpg" height=100px>
         </li>
       </ul>
-      <p>Python, Java and Javascript are my top 3 languages and I am most comfortable working with these. I also have
-        experience with all the other languages and tools displayed above. I'm looking to learn some React and Swift
-        soon as I'm thinking of creating a mobile app for proper daily water intake.
-        <br><br>
-        Currently for my final year project, I am learning first hand about Agile development processes. I am working in a
-        team of 8 people and we follow the Scrum methodology with our own scrum master and product owner.
+
+      <p>I am an expereince cloud engineer well versed in 3 of the major public cloud offers of AWS, GCP and Azure. 
+      I have Terraform experience using all three and I am cloud certified in GCP and Azure.
       </p>
-      <br>
+      <p>As a data engineer, I am proficient with SQL and Snowflake. I have recently been upskilling in the analytics space by using DBT.
+      </p>
 
       <h3>Projects</h3>
       <br>
@@ -91,7 +58,7 @@
 
       <p>This is just one of my favourites from 2018. Check out my projects page to see all of my featured work!</p>
       <b-button size="nd" @click="$router.push({name: 'projects'})">View my projects</b-button>
-      <br><br><br>x
+      <br><br><br>
 
       <h3>Blog</h3>
       <br>
