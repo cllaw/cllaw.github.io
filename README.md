@@ -17,9 +17,9 @@ npm run dev
 npm run build
 ```
 
-Then commit and push changes to the new dist folder.
+Then commit and push changes to `build.js` and `build.js.map` files in the dist folder to main.
 
-.yml file will pick up changes and deploy to hosted site via Github Actions
+The .yml file will pick up changes and deploy to hosted site via Github Actions
 
 ---
 
