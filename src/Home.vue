@@ -10,13 +10,13 @@
     <div id="bio">
       <h3>About Me</h3>
       <br>
-      <p>Hi there and welcome to my space on the web!
+      <p>Hi there and welcome to my little corner of the internet!
         <br><br>
         I am a Data Engineer at <a href="https://www.trademe.co.nz" target="_blank">Trade Me</a> 
-        and a Master's student at Victoria University of Wellington studying towards a 
-        <a href="https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-artificial-intelligence/overview" target="_blank">Master of Artificial Intelligence</a>.
+        and a graduate of the <a href="https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-artificial-intelligence/overview" target="_blank">Master of Artificial Intelligence</a> program 
+        at Victoria University of Wellington.
       </p>
-      <p>I use this website to post cool photos I've taken over the years to write about some of thoughts.</p>
+      <p>This site is where I share snapshots I’ve taken over the years and the occasional thought or reflection.</p>
 
       <h3>Skills</h3>
       <br>
