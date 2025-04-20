@@ -3,7 +3,7 @@
     <div id="head">
       <img src="./assets/profile_picture.jpg" height=250 width=250>
       <h1>Chuan Law</h1>
-      <h2>Data Engineer | Master's Student</h2>
+      <h2>Data Engineer | Masters of Artificial Intelligence</h2>
       <p>Wellington, New Zealand</p>
     </div>
 

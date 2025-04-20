@@ -1,5 +1,7 @@
 # Chuan Law's Website
 
+https://chuanlaw.me/
+
 ## Local Build Setup
 
 ``` bash
