@@ -19,7 +19,7 @@ npm run build
 
 Then commit and push changes to `build.js` and `build.js.map` files in the dist folder to main.
 
-The .yml file will pick up changes and deploy to hosted site via Github Actions
+The `.github/workflows/static.yml` file will pick up changes and deploy to hosted site via Github Actions.
 
 ---
 
