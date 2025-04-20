@@ -12,11 +12,12 @@
       <br>
       <p>Hi there and welcome to my little corner of the internet!
         <br><br>
-        I am a Data Engineer at <a href="https://www.trademe.co.nz" target="_blank">Trade Me</a> 
+        I am a New Zealand based Data Engineer working at <a href="https://www.trademe.co.nz" target="_blank">Trade Me</a> 
         and a graduate of the <a href="https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-artificial-intelligence/overview" target="_blank">Master of Artificial Intelligence</a> program 
-        at Victoria University of Wellington.
+        at Victoria University of Wellington. My thesis researched involved using an OpenAI inspired <a href="https://openai.com/index/evolution-strategies/" target="_blank"> evolutionary reinforcement learning</a> algorithm to optimize cost saving in geographically distributed cloud systems. 
+        You can find the paper and project on <a href="https://github.com/cllaw/AIML589-RL-DDMWS/blob/master/Chuan-Law-MAI-Thesis-2024.pdf" target="_blank"> github.</a>
       </p>
-      <p>This site is where I share snapshots I’ve taken over the years and the occasional thought or reflection.</p>
+      <p>This site is also where I share snapshots I’ve taken over the years and the occasional thought or reflection.</p>
 
       <h3>Skills</h3>
       <br>
