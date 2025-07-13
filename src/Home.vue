@@ -84,9 +84,6 @@
       </div>
       <div class="dash"></div>
       <br>
-    <a href="../CV/Chuan_Law_-_October_2021.pdf" target="_blank">
-      <b-button size="lg">Download my CV</b-button>
-    </a>
     </div>
 
     <footer class="section footer">

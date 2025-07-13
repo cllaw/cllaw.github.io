@@ -11,14 +11,6 @@
           <b-nav-item class="btn btn-edit" @click="$router.push({name: 'home'})">About Me</b-nav-item>
           <b-nav-item class="btn btn-edit" @click="$router.push({name: 'projects'})">Projects</b-nav-item>
           <b-nav-item class="btn btn-edit" @click="$router.push({name: 'blog'})">Blog</b-nav-item>
-
-      </b-navbar-nav>
-
-      <b-navbar-nav>
-        <b-nav-item-dropdown class="btn btn-edit" text="Contact">
-          <b-dropdown-item href="https://www.linkedin.com/in/chuan-law/">LinkedIn</b-dropdown-item>
-          <!--<a href="mailto:cllaw_1997@hotmail.com">Email</a>-->
-        </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
