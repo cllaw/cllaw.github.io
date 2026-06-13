@@ -1,41 +1,21 @@
 {
-  "name": "chuan_portfolio_website",
-  "description": "Chuan's Personal Website",
-  "version": "1.0.0",
-  "author": "Chuan Law <cllaw_1997@hotmail.com>",
-  "license": "MIT",
-  "private": true,
+  "name": "cllaw-github-io",
+  "type": "module",
+  "version": "2.0.0",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "deploy": "npm run build; push-dir --dir=dist --branch=gh-pages --cleanup"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "bootstrap-vue": "^2.0.0-rc.11",
-    "style-loader": "^0.23.1",
-    "vue": "^2.5.11",
-    "vue-cli": "^2.9.6",
-    "vue-resource": "^1.5.1",
-    "vue-router": "^3.0.2",
-    "vue-scroll-behavior": "^0.2.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-3": "^6.24.1",
-    "cross-env": "^5.0.5",
-    "css-loader": "^0.28.11",
-    "file-loader": "^1.1.4",
-    "push-dir": "^0.4.1",
-    "vue-loader": "^13.0.5",
-    "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "@astrojs/markdoc": "^0.14.0",
+    "@astrojs/react": "^4.2.0",
+    "@keystatic/astro": "^5.0.0",
+    "@keystatic/core": "^0.5.0",
+    "astro": "^5.7.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.33.0"
   }
 }

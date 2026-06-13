@@ -1,0 +1,150 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+const years = [
+  { year: 2020, destinations: 'Singapore, Japan', color: '#90ee90', side: 'right', href: undefined },
+  { year: 2019, destinations: 'Christchurch, Papua New Guinea', color: '#ffa07a', side: 'left', href: '/blog/travel-2019' },
+  { year: 2018, destinations: 'Queenstown, Japan, Singapore', color: '#87ceeb', side: 'right', href: '/blog/travel-2018' },
+  { year: 2017, destinations: 'Malaysia', color: '#e6e6fa', side: 'left', href: undefined },
+];
+---
+
+<PageLayout title="Blog | Chuan Law" description="Travel journal and photos by Chuan Law">
+  <header class="blog-hero">
+    <h1>Blog</h1>
+  </header>
+
+  <div class="timeline">
+    {years.map(entry => {
+      const Tag = entry.href ? 'a' : 'div';
+      return (
+        <div class={`timeline-item ${entry.side}`}>
+          <Tag class="timeline-content" href={entry.href || undefined} style={`background-color: ${entry.color}`}>
+            <h2>{entry.year}</h2>
+            <p>{entry.destinations}</p>
+          </Tag>
+        </div>
+      );
+    })}
+  </div>
+</PageLayout>
+
+<style>
+  .blog-hero {
+    background-image: url('/images/hero/IMG_9923.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .blog-hero h1 {
+    color: #fff;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 0;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem 0;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #e1e1e1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 10px 40px;
+  }
+
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 4px solid #ff9f55;
+    top: 18px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .timeline-item.left {
+    left: 0;
+  }
+
+  .timeline-item.right {
+    left: 50%;
+  }
+
+  .timeline-item.left::after {
+    right: -10px;
+  }
+
+  .timeline-item.right::after {
+    left: -10px;
+  }
+
+  .timeline-content {
+    display: block;
+    padding: 1.25rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  a.timeline-content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .timeline-content h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+  }
+
+  .timeline-content p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 640px) {
+    .timeline::after {
+      left: 20px;
+    }
+
+    .timeline-item {
+      width: 100%;
+      padding-left: 50px;
+      padding-right: 1rem;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+      left: 0;
+    }
+
+    .timeline-item::after {
+      left: 10px;
+      right: auto;
+    }
+  }
+</style>

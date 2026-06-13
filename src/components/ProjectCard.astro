@@ -1,0 +1,82 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  links?: { label: string; url: string }[];
+}
+
+const { title, description, image, links = [] } = Astro.props;
+---
+
+<div class="project-card">
+  <img src={image} alt={title} loading="lazy" class="project-image" />
+  <div class="project-body">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    {links.length > 0 && (
+      <div class="project-links">
+        {links.map(link => (
+          <a href={link.url} target="_blank" rel="noopener noreferrer" class="btn">
+            {link.label}
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</div>
+
+<style>
+  .project-card {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .project-card:last-child {
+    border-bottom: none;
+  }
+
+  .project-image {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+
+  .project-body h3 {
+    font-size: 1.4rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .project-body p {
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 640px) {
+    .project-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .project-links {
+      justify-content: center;
+    }
+  }
+</style>

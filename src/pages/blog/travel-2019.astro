@@ -1,0 +1,66 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import GalleryCard from '../../components/GalleryCard.astro';
+
+const items = [
+  { title: 'Christchurch', image: '/images/blog/travel-2019/IMG_6449.jpg' },
+  { title: 'Papua New Guinea', image: '/images/blog/travel-2019/IMG_5564.jpg' },
+  { title: 'Graduation', image: '/images/blog/travel-2019/IMG_2928.jpg' },
+  { title: 'Family & Friends', image: '/images/blog/travel-2019/IMG_0523.jpg' },
+];
+---
+
+<PageLayout title="2019 | Blog | Chuan Law" description="Travel photos and stories from 2019">
+  <header class="gallery-hero">
+    <a href="/blog" class="hero-link">2019</a>
+  </header>
+
+  <div class="gallery-grid">
+    {items.map(item => (
+      <GalleryCard title={item.title} image={item.image} href={item.href} />
+    ))}
+  </div>
+</PageLayout>
+
+<style>
+  .gallery-hero {
+    background-image: url('/images/hero/IMG_9923.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .hero-link {
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .hero-link:hover {
+    color: #ddd;
+    text-decoration: none;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+  }
+</style>
