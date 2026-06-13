@@ -1,0 +1,37 @@
+---
+interface Props {
+  src1: string;
+  alt1?: string;
+  src2: string;
+  alt2?: string;
+}
+
+const { src1, alt1 = '', src2, alt2 = '' } = Astro.props;
+---
+
+<div class="photo-pair">
+  <img src={src1} alt={alt1} loading="lazy" />
+  <img src={src2} alt={alt2} loading="lazy" />
+</div>
+
+<style>
+  .photo-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .photo-pair img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 480px) {
+    .photo-pair {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

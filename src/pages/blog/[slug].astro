@@ -19,7 +19,43 @@ if (!post) {
 }
 
 const { node } = await post.content();
-const html = Markdoc.renderers.html(node);
+
+const config = {
+  tags: {
+    'photo-pair': {
+      render: 'div',
+      attributes: {
+        src1: { type: String, required: true },
+        alt1: { type: String, default: '' },
+        src2: { type: String, required: true },
+        alt2: { type: String, default: '' },
+      },
+      transform(node: any, config: any) {
+        const attrs = node.transformAttributes(config);
+        return new Markdoc.Tag('div', { class: 'photo-pair' }, [
+          new Markdoc.Tag('img', { src: attrs.src1, alt: attrs.alt1, loading: 'lazy' }),
+          new Markdoc.Tag('img', { src: attrs.src2, alt: attrs.alt2, loading: 'lazy' }),
+        ]);
+      },
+    },
+    'photo-full': {
+      render: 'div',
+      attributes: {
+        src: { type: String, required: true },
+        alt: { type: String, default: '' },
+      },
+      transform(node: any, config: any) {
+        const attrs = node.transformAttributes(config);
+        return new Markdoc.Tag('div', { class: 'photo-full' }, [
+          new Markdoc.Tag('img', { src: attrs.src, alt: attrs.alt, loading: 'lazy' }),
+        ]);
+      },
+    },
+  },
+};
+
+const transformed = Markdoc.transform(node, config);
+const html = Markdoc.renderers.html(transformed);
 ---
 
 <BlogPostLayout
@@ -30,3 +66,30 @@ const html = Markdoc.renderers.html(node);
 >
   <Fragment set:html={html} />
 </BlogPostLayout>
+
+<style is:global>
+  .photo-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .photo-pair img,
+  .photo-full img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  .photo-full {
+    margin: 1.5rem 0;
+  }
+
+  @media (max-width: 480px) {
+    .photo-pair {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
