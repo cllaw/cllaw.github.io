@@ -1,4 +1,5 @@
 import { config, fields, collection, singleton } from '@keystatic/core';
+import { postComponents } from './src/lib/blocks';
 
 export default config({
   storage: {
@@ -31,6 +32,7 @@ export default config({
               publicPath: '/images/blog',
             },
           },
+          components: postComponents,
         }),
       },
     }),

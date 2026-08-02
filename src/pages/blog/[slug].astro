@@ -3,6 +3,7 @@ import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../../keystatic.config';
 import Markdoc from '@markdoc/markdoc';
 import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+import { markdocTags } from '../../lib/blocks';
 
 export async function getStaticPaths() {
   const reader = createReader(process.cwd(), keystaticConfig);
@@ -20,39 +21,7 @@ if (!post) {
 
 const { node } = await post.content();
 
-const config = {
-  tags: {
-    'photo-pair': {
-      render: 'div',
-      attributes: {
-        src1: { type: String, required: true },
-        alt1: { type: String, default: '' },
-        src2: { type: String, required: true },
-        alt2: { type: String, default: '' },
-      },
-      transform(node: any, config: any) {
-        const attrs = node.transformAttributes(config);
-        return new Markdoc.Tag('div', { class: 'photo-pair' }, [
-          new Markdoc.Tag('img', { src: attrs.src1, alt: attrs.alt1, loading: 'lazy' }),
-          new Markdoc.Tag('img', { src: attrs.src2, alt: attrs.alt2, loading: 'lazy' }),
-        ]);
-      },
-    },
-    'photo-full': {
-      render: 'div',
-      attributes: {
-        src: { type: String, required: true },
-        alt: { type: String, default: '' },
-      },
-      transform(node: any, config: any) {
-        const attrs = node.transformAttributes(config);
-        return new Markdoc.Tag('div', { class: 'photo-full' }, [
-          new Markdoc.Tag('img', { src: attrs.src, alt: attrs.alt, loading: 'lazy' }),
-        ]);
-      },
-    },
-  },
-};
+const config = { tags: markdocTags };
 
 const transformed = Markdoc.transform(node, config);
 const html = Markdoc.renderers.html(transformed);
@@ -66,30 +35,3 @@ const html = Markdoc.renderers.html(transformed);
 >
   <Fragment set:html={html} />
 </BlogPostLayout>
-
-<style is:global>
-  .photo-pair {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    margin: 1.5rem 0;
-  }
-
-  .photo-pair img,
-  .photo-full img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    object-fit: cover;
-  }
-
-  .photo-full {
-    margin: 1.5rem 0;
-  }
-
-  @media (max-width: 480px) {
-    .photo-pair {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
