@@ -1,0 +1,38 @@
+---
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../../keystatic.config';
+import Markdoc from '@markdoc/markdoc';
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+import { markdocTags } from '../../lib/blocks';
+
+export async function getStaticPaths() {
+  const reader = createReader(process.cwd(), keystaticConfig);
+  const slugs = await reader.collections.posts.list();
+  return slugs.map(slug => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const reader = createReader(process.cwd(), keystaticConfig);
+const post = await reader.collections.posts.read(slug!);
+
+if (!post) {
+  return Astro.redirect('/blog');
+}
+
+const { node } = await post.content();
+
+const config = { tags: markdocTags };
+
+const transformed = Markdoc.transform(node, config);
+const html = Markdoc.renderers.html(transformed);
+---
+
+<BlogPostLayout
+  title={post.title}
+  subtitle={post.location || ''}
+  year={post.year}
+  description={post.description || ''}
+  coverImage={post.coverImage || undefined}
+>
+  <Fragment set:html={html} />
+</BlogPostLayout>

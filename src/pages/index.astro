@@ -1,0 +1,162 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+---
+
+<PageLayout>
+  <HeroSection
+    backgroundImage="/images/hero/IMG_3280.png"
+    title="Chuan Law"
+    subtitle="Data Engineer | Masters of Artificial Intelligence"
+    location="Wellington, New Zealand"
+    profileImage="/images/profile/profile_picture.jpg"
+  />
+
+  <div class="content">
+    <section class="section">
+      <h3 class="section-heading">About Me</h3>
+      <p>
+        Hi there and welcome to my little corner of the internet!
+      </p>
+      <p>
+        I am a New Zealand based Data Engineer working at
+        <a href="https://www.trademe.co.nz" target="_blank" rel="noopener noreferrer">Trade Me</a>
+        and a graduate of the
+        <a href="https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-artificial-intelligence/overview" target="_blank" rel="noopener noreferrer">Master of Artificial Intelligence</a>
+        program at Victoria University of Wellington. My thesis research involved using an OpenAI inspired
+        <a href="https://openai.com/index/evolution-strategies/" target="_blank" rel="noopener noreferrer">evolutionary reinforcement learning</a>
+        algorithm to optimize cost saving in geographically distributed cloud systems.
+        You can find the paper and project on
+        <a href="https://github.com/cllaw/AIML589-RL-DDMWS/blob/master/Chuan-Law-MAI-Thesis-2024.pdf" target="_blank" rel="noopener noreferrer">github.</a>
+      </p>
+      <p>This site is also where I share snapshots I've taken over the years and the occasional thought or reflection.</p>
+    </section>
+
+    <section class="section">
+      <h3 class="section-heading">Skills</h3>
+      <ul class="skills-grid">
+        <li>
+          <img src="https://icongr.am/devicon/python-original.svg?size=100" alt="Python" />
+        </li>
+        <li>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" style="height: 50px" />
+        </li>
+        <li>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original-wordmark.svg" alt="Google Cloud" style="height: 100px" />
+        </li>
+        <li>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" alt="Terraform" style="height: 75px" />
+        </li>
+        <li>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg" alt="Snowflake" style="height: 50px" />
+        </li>
+        <li>
+          <img src="https://logowik.com/content/uploads/images/dbt5596.jpg" alt="DBT" style="height: 75px" />
+        </li>
+      </ul>
+      <p>
+        I am an experienced cloud engineer well versed in 3 major public cloud offerings of AWS, GCP and Azure.
+        I have Terraform experience building production capable infrastructure using all three and I am cloud certified in GCP and Azure.
+      </p>
+      <p>
+        As a data engineer, I am proficient with SQL and Snowflake. I have recently been upskilling in the analytics space with the use of DBT.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3 class="section-heading">Projects</h3>
+      <p>
+        Across my 3 years of study, I have been involved in some interesting projects. In 2018 I took one my favourite
+        papers, Humans and Computer Interaction (COSC368). This was a very design heavy and UI/UX focused course. Our team built
+        a prototype of an idealised car park finder application for the university and the clickable product is available
+        <a href="https://invis.io/ZGOASCK4CNM" target="_blank" rel="noopener noreferrer">here.</a>
+      </p>
+      <p>This is just one of my favourites from 2018. Check out my projects page to see all of my featured work!</p>
+      <a href="/projects" class="btn">View my projects</a>
+    </section>
+
+    <section class="section">
+      <h3 class="section-heading">Blog</h3>
+      <p>
+        Whenever I travel (or just everyday when I see something nice) I like to take photos. It's nice just writing
+        sometimes and its even nicer to remember the places you've visited. My blog is just a collection of some of my
+        favourite photos and what was on my mind when taking them.
+      </p>
+      <a href="/blog" class="btn">View my blog</a>
+    </section>
+
+    <section class="section connect">
+      <h3 class="section-heading">Connect with me!</h3>
+      <div class="divider"></div>
+      <SocialLinks />
+      <div class="divider"></div>
+    </section>
+  </div>
+</PageLayout>
+
+<style>
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+    text-align: left;
+  }
+
+  .section p {
+    line-height: 1.8;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .skills-grid li {
+    transition: transform 0.2s;
+  }
+
+  .skills-grid li:hover {
+    transform: scale(1.1);
+  }
+
+  .skills-grid img {
+    max-height: 60px;
+    width: auto;
+  }
+
+  .connect {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .divider {
+    border-bottom: 1px solid var(--color-primary);
+    width: 50%;
+    margin: 1rem auto;
+  }
+
+  @media (max-width: 640px) {
+    .content {
+      padding: 0 1rem;
+    }
+
+    .skills-grid {
+      gap: 1rem;
+    }
+
+    .skills-grid img {
+      max-height: 45px;
+    }
+  }
+</style>

@@ -1,0 +1,73 @@
+---
+interface Props {
+  backgroundImage: string;
+  title: string;
+  subtitle?: string;
+  location?: string;
+  profileImage?: string;
+}
+
+const { backgroundImage, title, subtitle, location, profileImage } = Astro.props;
+---
+
+<section class="hero" style={`background-image: url('${backgroundImage}')`}>
+  {profileImage && (
+    <img src={profileImage} alt={title} class="hero-avatar" width="200" height="200" />
+  )}
+  <h1 class="hero-title">{title}</h1>
+  {subtitle && <p class="hero-subtitle">{subtitle}</p>}
+  {location && <p class="hero-location">{location}</p>}
+</section>
+
+<style>
+  .hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    color: #fff;
+  }
+
+  .hero-avatar {
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: #fff;
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+  }
+
+  .hero-location {
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding: 3rem 1rem;
+    }
+
+    .hero-avatar {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>

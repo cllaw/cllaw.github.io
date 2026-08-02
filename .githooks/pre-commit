@@ -1,0 +1,11 @@
+#!/bin/sh
+# Optimize any staged blog images before they are committed.
+set -e
+
+staged=$(git diff --cached --name-only --diff-filter=ACM | grep -iE '^public/images/.*\.(jpe?g|png)$' || true)
+[ -z "$staged" ] && exit 0
+
+echo "Optimizing staged images..."
+# Filenames in this repo have no spaces; word-splitting on newlines is fine.
+node scripts/optimize-images.mjs $staged
+git add $staged

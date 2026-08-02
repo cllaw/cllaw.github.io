@@ -1,0 +1,70 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  href?: string;
+}
+
+const { image, title, href } = Astro.props;
+const Tag = href ? 'a' : 'div';
+---
+
+<Tag class="gallery-card" href={href || undefined}>
+  <img src={image} alt={title} loading="lazy" />
+  <div class="overlay">
+    <h3>{title}</h3>
+  </div>
+</Tag>
+
+<style>
+  .gallery-card {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    aspect-ratio: 4 / 3;
+    border-radius: 6px;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .overlay h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0;
+    transform: translateY(-20px);
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-card:hover img {
+    transform: scale(1.1);
+  }
+
+  .gallery-card:hover .overlay {
+    opacity: 1;
+  }
+
+  .gallery-card:hover .overlay h3 {
+    transform: translateY(0);
+  }
+
+  a.gallery-card {
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>

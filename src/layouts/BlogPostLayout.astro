@@ -1,0 +1,68 @@
+---
+import PageLayout from './PageLayout.astro';
+import '../styles/blocks.css';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  year: number;
+  description?: string;
+  coverImage?: string;
+}
+
+const { title, subtitle, year, description, coverImage } = Astro.props;
+---
+
+<PageLayout title={`${title} | Chuan Law`} description={description} image={coverImage}>
+  <header class="post-hero" style={coverImage ? `background-image: url('${coverImage}')` : undefined}>
+    <a href={`/blog/travel-${year}`} class="post-hero-link">{year}</a>
+  </header>
+
+  <article class="prose post-content">
+    <h1>{title}</h1>
+    {subtitle && <p class="post-subtitle">{subtitle}</p>}
+    <slot />
+  </article>
+</PageLayout>
+
+<style>
+  .post-hero {
+    background-image: url('/images/hero/IMG_9923.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .post-hero-link {
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .post-hero-link:hover {
+    color: #ddd;
+    text-decoration: none;
+  }
+
+  .post-content {
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .post-content h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 0.25rem;
+  }
+
+  .post-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-top: 0;
+  }
+</style>
