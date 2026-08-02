@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "prepare": "git config core.hooksPath .githooks || true"
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.14.0",
