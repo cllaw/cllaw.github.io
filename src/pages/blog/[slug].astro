@@ -32,6 +32,7 @@ const html = Markdoc.renderers.html(transformed);
   subtitle={post.location || ''}
   year={post.year}
   description={post.description || ''}
+  coverImage={post.coverImage || undefined}
 >
   <Fragment set:html={html} />
 </BlogPostLayout>
